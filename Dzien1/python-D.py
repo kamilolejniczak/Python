@@ -226,3 +226,4 @@ res = round(SPK*(1+P/100)**N,2)
 print("Kwota po "+str(N)+" latach wynosi: "+str(res) +"zł.")
 '''
 
+
