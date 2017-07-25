@@ -236,6 +236,7 @@ while(i == "t"):
 print("Do zapłaty: "+str(suma))
 '''
 #P
+'''
 i = "t"
 res = []
 to_dec = {'1' : 'jeden', '2' : 'dwa', '3' : 'trzy',
@@ -251,6 +252,29 @@ while(i == 't'):
 print(res)
 for i in res:
     print(i,end="<<<===d(*_*)b===")
+'''
+#P61
+'''
+line = range(1,6)
+n = 1
+print("    %3i%3i%3i%3i%3i" % (1,2,3,4,5))
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~")
+while(n<=5):
+    print(str(n)+" (*..*)",end="")
+    print("%3i%3i%3i%3i%3i" % (n*line[0], n*line[1], n*line[2], n*line[3], n*line[4]))
+    n += 1
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~")
+'''
+#P3
+print("Kwadraty Liczb Nieparzystych")
+np = range(1,10,2)
+i = len(np) - 1
+while(i>=0):
+    if(i == 0):
+        print(np[i]**2)
+    else:
+        print(np[i]**2, end=", ")
+    i -= 1
 
         
     
