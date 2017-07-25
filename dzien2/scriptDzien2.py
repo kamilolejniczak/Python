@@ -174,7 +174,83 @@ else:
 print('jestem poza')
 '''
 #któRa z liczb jest większa i o ile? wyrażenie trójargumentowe
+'''
 a = 14
 b = 15
 
 print("a jest wieksze od b o: "+str(a-b)) if(a>=b) else print("a jest mniejsze od b o: "+str(b-a))
+'''
+#
+'''
+lista = [1,2,3,4,5,6,7,8,9]
+for var in lista:
+    print("Wartość: "+str(var))
+lista.append(15)
+for index,var in enumerate(lista):
+    print("Index: "+str(index)+"\tWartość: "+str(var))
+
+SL = {'a' : 1, 'b' : 2, 'c' : 3}
+for k in SL:
+    print(k, SL[k])
+for k in SL:
+    if(SL[k]>=2):
+        print(k,SL[k])
+'''
+#
+'''
+sl = range(100)
+print(sl)
+for i in sl:
+    print(i)
+for j in range(15,25):
+    print(j)
+for k in range(0,10):
+    print(k**4,k,k**2,k**3)
+for l in range(0,100):
+    print("wynik: %4i%6i%8i" % (l,l**2,l**3))
+for m in range(5,100,10):
+    print("pierwiastek kwadratowy z %4i wynosi: %6.2f" % (m,m**0.5))
+'''
+#57
+'''
+sklep_produkty = {"monitor" : 1, "klawiatura logitech" : 2, "mysz" : 3}
+produkty_cena = {1:1500,2:400,3:200}
+produkty_dostepnosc = {1:5,2:5,3:15}
+suma = 0
+i = "t"
+while(i == "t"):
+    zamowienie = input("Wybierz towar: ")
+    zamowienie_ilosc = int(input("podaj ilość: "))
+    for k in sklep_produkty:
+        if(zamowienie in sklep_produkty.keys()):
+            if(zamowienie == k and produkty_dostepnosc[sklep_produkty[k]]>= zamowienie_ilosc):
+                print("Produkt dostępny: " + k)
+                print("Zamawiasz: " + str(zamowienie_ilosc)+' szt')
+                suma += zamowienie_ilosc*produkty_cena[sklep_produkty[k]]
+            elif(zamowienie == k and produkty_dostepnosc[sklep_produkty[k]]< zamowienie_ilosc):
+                print("Produkt dostępny: "+k)
+                print("Jest dostępne tylko: "+str(produkty_dostepnosc[sklep_produkty[k]])+ ' szt')
+        else:
+            print("Brak produktu w sklepie")
+    i = input("Czy chcesz zamawiać dalej? (t/n)")
+print("Do zapłaty: "+str(suma))
+'''
+#P
+i = "t"
+res = []
+to_dec = {'1' : 'jeden', '2' : 'dwa', '3' : 'trzy',
+          '4' : 'cztery', '5' : 'pięć', '6' : 'sześć',
+          '7' : 'siedem', '8' : 'osiem', '9' : 'dziewięć'} 
+while(i == 't'):
+    dig = input("Wprowadź cyfrę: ")
+    if(dig.isdigit()):
+        res.append(to_dec[dig])
+    else:
+        print('podana wartość nie jest cyfrą')
+    i = input("czy chcesz wprowadzać dalej? (t/n)")
+print(res)
+for i in res:
+    print(i,end="<<<===d(*_*)b===")
+
+        
+    
